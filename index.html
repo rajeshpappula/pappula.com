@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="The story of the Pappula name, rooted in Pappulavaripalem and carried by a community around the world."
+    >
+    <meta name="theme-color" content="#f7f5ef">
+    <title>Pappula — One name, many journeys</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f7f5ef;
+        --ink: #1d3029;
+        --muted: #627068;
+        --green: #345b48;
+        --green-dark: #234235;
+        --orange: #d97748;
+        --line: #dedfd5;
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Segoe UI", Arial, sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--orange);
+        outline-offset: 4px;
+      }
+
+      .shell {
+        width: min(1120px, calc(100% - 48px));
+        margin-inline: auto;
+      }
+
+      .site-header {
+        position: relative;
+        z-index: 2;
+        border-bottom: 1px solid rgb(29 48 41 / 9%);
+      }
+
+      .header-inner {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        text-decoration: none;
+        font-family: var(--serif);
+        font-size: 1.45rem;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--green);
+        color: white;
+        font-family: var(--sans);
+        font-size: 0.9rem;
+        letter-spacing: 0;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+      }
+
+      .nav-links a {
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: color 160ms ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--green-dark);
+      }
+
+      .nav-links .nav-cta {
+        padding: 11px 17px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--ink);
+      }
+
+      .menu-toggle {
+        display: none;
+        padding: 9px 13px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .hero {
+        min-height: 620px;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: 48px;
+        padding-block: 74px 88px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 24px;
+        color: var(--green);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 24px;
+        height: 1px;
+        background: var(--orange);
+        content: "";
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--serif);
+        font-weight: 500;
+      }
+
+      h1 {
+        max-width: 650px;
+        margin-bottom: 23px;
+        font-size: clamp(3.55rem, 7vw, 6.35rem);
+        letter-spacing: -0.075em;
+        line-height: 0.98;
+      }
+
+      h1 span {
+        color: var(--green);
+        font-style: italic;
+      }
+
+      .hero-copy {
+        max-width: 470px;
+        margin-bottom: 31px;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.8;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .button {
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 20px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        background: var(--green);
+        color: white;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 160ms ease, transform 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        background: var(--green-dark);
+      }
+
+      .button-secondary {
+        border-color: var(--line);
+        background: transparent;
+        color: var(--ink);
+      }
+
+      .button-secondary:hover {
+        background: #eeece4;
+        color: var(--ink);
+      }
+
+      .hero-art {
+        position: relative;
+        min-height: 410px;
+        display: grid;
+        place-items: center;
+      }
+
+      .art-orbit {
+        position: absolute;
+        width: min(100%, 410px);
+        aspect-ratio: 1;
+        border: 1px solid #dfe1d7;
+        border-radius: 50%;
+      }
+
+      .art-orbit::before,
+      .art-orbit::after {
+        position: absolute;
+        inset: 9%;
+        border: 1px solid #e5e5dc;
+        border-radius: 50%;
+        content: "";
+      }
+
+      .art-orbit::after {
+        inset: 19%;
+      }
+
+      .sun {
+        position: absolute;
+        top: 4%;
+        right: 16%;
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        background: #e8ad7b;
+        opacity: 0.75;
+      }
+
+      .globe {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        border: 1px solid rgb(255 255 255 / 55%);
+        border-radius: 50%;
+        background:
+          radial-gradient(ellipse at 68% 32%, transparent 35%, rgb(31 66 49 / 35%) 36%, transparent 37%),
+          radial-gradient(ellipse at 50% 50%, transparent 47%, rgb(31 66 49 / 35%) 48%, transparent 49%),
+          radial-gradient(ellipse at 50% 50%, transparent 62%, rgb(31 66 49 / 30%) 63%, transparent 64%),
+          linear-gradient(145deg, #9fb99d, #527b62 58%, #315540);
+        box-shadow: 0 30px 70px rgb(44 71 52 / 19%);
+      }
+
+      .globe::before,
+      .globe::after {
+        position: absolute;
+        inset: 0;
+        border: 1px solid rgb(244 241 224 / 45%);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .globe::before {
+        left: 28%;
+        right: 28%;
+      }
+
+      .globe::after {
+        top: 27%;
+        bottom: 27%;
+      }
+
+      .globe-dot {
+        position: absolute;
+        z-index: 1;
+        width: 12px;
+        height: 12px;
+        border: 3px solid var(--paper);
+        border-radius: 50%;
+        background: var(--orange);
+        box-shadow: 0 0 0 6px rgb(247 245 239 / 18%);
+      }
+
+      .dot-one {
+        top: 34%;
+        left: 33%;
+      }
+
+      .dot-two {
+        top: 48%;
+        right: 25%;
+        width: 9px;
+        height: 9px;
+      }
+
+      .dot-three {
+        bottom: 28%;
+        left: 48%;
+        width: 8px;
+        height: 8px;
+      }
+
+      .art-note {
+        position: absolute;
+        right: 0;
+        bottom: 13%;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 14px 18px;
+        border: 1px solid rgb(29 48 41 / 8%);
+        border-radius: 14px;
+        background: rgb(255 255 255 / 85%);
+        box-shadow: 0 12px 35px rgb(33 47 39 / 8%);
+      }
+
+      .note-icon {
+        width: 35px;
+        height: 35px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: #f4e8d9;
+        color: #a75332;
+        font-size: 1rem;
+      }
+
+      .art-note strong,
+      .art-note span {
+        display: block;
+      }
+
+      .art-note strong {
+        margin-bottom: 3px;
+        font-family: var(--serif);
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .art-note span {
+        color: var(--muted);
+        font-size: 0.74rem;
+      }
+
+      .intro-band {
+        border-block: 1px solid var(--line);
+        background: #efeee7;
+      }
+
+      .intro-inner {
+        min-height: 160px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 36px;
+        padding-block: 30px;
+      }
+
+      .intro-inner p {
+        max-width: 670px;
+        margin: 0;
+        color: var(--muted);
+        font-family: var(--serif);
+        font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+        line-height: 1.5;
+      }
+
+      .stat {
+        padding-left: 32px;
+        border-left: 1px solid #d5d7cc;
+      }
+
+      .stat strong {
+        display: block;
+        color: var(--green);
+        font-family: var(--serif);
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: -0.06em;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 100px;
+        padding-block: 112px;
+      }
+
+      .section-heading h2 {
+        max-width: 360px;
+        margin-bottom: 0;
+        font-size: clamp(2.5rem, 4vw, 3.8rem);
+        letter-spacing: -0.055em;
+        line-height: 1.08;
+      }
+
+      .story-copy {
+        padding-top: 12px;
+      }
+
+      .story-copy p {
+        margin-bottom: 20px;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.85;
+      }
+
+      .story-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .community {
+        padding-block: 76px 84px;
+        border-radius: 22px;
+        background: var(--green-dark);
+        color: #f8f6ef;
+      }
+
+      .community-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 64px;
+      }
+
+      .community .eyebrow {
+        color: #c9d7c6;
+      }
+
+      .community h2 {
+        max-width: 475px;
+        margin-bottom: 18px;
+        font-size: clamp(2.65rem, 4.5vw, 4.1rem);
+        letter-spacing: -0.06em;
+        line-height: 1.05;
+      }
+
+      .community-copy {
+        max-width: 450px;
+        margin-bottom: 0;
+        color: #c9d3ca;
+        line-height: 1.8;
+      }
+
+      .community-quote {
+        position: relative;
+        padding: 34px 0 34px 34px;
+        border-left: 1px solid rgb(255 255 255 / 24%);
+      }
+
+      .community-quote p {
+        margin-bottom: 20px;
+        font-family: var(--serif);
+        font-size: clamp(1.55rem, 2.6vw, 2.1rem);
+        line-height: 1.4;
+      }
+
+      .community-quote span {
+        color: #c9d3ca;
+        font-size: 0.8rem;
+      }
+
+      .site-footer {
+        padding-block: 35px;
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .footer-inner p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .footer-inner a {
+        color: var(--green);
+        font-size: 0.82rem;
+        text-decoration: none;
+      }
+
+      @media (max-width: 760px) {
+        .hero {
+          min-height: 0;
+          grid-template-columns: 1fr;
+          gap: 16px;
+          padding-block: 76px 48px;
+        }
+
+        .hero-art {
+          min-height: 360px;
+        }
+
+        .art-orbit {
+          width: min(88%, 360px);
+        }
+
+        .globe {
+          width: 220px;
+          height: 220px;
+        }
+
+        .art-note {
+          right: 2%;
+          bottom: 5%;
+        }
+
+        .story {
+          grid-template-columns: 1fr;
+          gap: 26px;
+          padding-block: 76px;
+        }
+
+        .section-heading h2 {
+          max-width: 480px;
+        }
+
+        .community-inner {
+          grid-template-columns: 1fr;
+          gap: 35px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100% - 36px, 1120px);
+        }
+
+        .header-inner {
+          min-height: 72px;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+          align-items: center;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: calc(100% + 1px);
+          right: 18px;
+          left: 18px;
+          display: none;
+          align-items: stretch;
+          gap: 0;
+          padding: 8px;
+          border: 1px solid var(--line);
+          border-radius: 14px;
+          background: var(--paper);
+          box-shadow: 0 18px 35px rgb(33 47 39 / 10%);
+        }
+
+        .nav-links.is-open {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .nav-links a {
+          padding: 13px 12px;
+        }
+
+        .nav-links .nav-cta {
+          margin-top: 4px;
+          border-color: transparent;
+        }
+
+        .hero {
+          padding-top: 62px;
+        }
+
+        h1 {
+          font-size: clamp(3.4rem, 17vw, 5rem);
+        }
+
+        .hero-copy {
+          font-size: 1rem;
+        }
+
+        .hero-art {
+          min-height: 315px;
+        }
+
+        .globe {
+          width: 190px;
+          height: 190px;
+        }
+
+        .art-note {
+          right: 0;
+          bottom: 3%;
+          padding: 11px 13px;
+        }
+
+        .intro-inner {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          padding-block: 27px;
+        }
+
+        .stat {
+          padding: 0;
+          border: 0;
+        }
+
+        .stat strong {
+          font-size: 2rem;
+        }
+
+        .community {
+          padding-block: 56px;
+          border-radius: 16px;
+        }
+
+        .community-quote {
+          padding-block: 10px;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#home" aria-label="Pappula home">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span>Pappula</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          Menu
+        </button>
+        <nav class="nav-links" id="site-navigation" aria-label="Main navigation">
+          <a href="#story">Our roots</a>
+          <a href="#community">Our community</a>
+          <a class="nav-cta" href="#story">Discover our story <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="shell hero" id="home" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">A name. A place. A community.</p>
+          <h1 id="hero-title">One name,<br>many <span>journeys.</span></h1>
+          <p class="hero-copy">
+            Pappula is more than a surname. It is a shared thread, rooted in
+            Pappulavaripalem and carried by people who have made homes all
+            around the world.
+          </p>
+          <div class="button-row">
+            <a class="button" href="#story">Discover our story <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#community">Meet the community</a>
+          </div>
+        </div>
+        <div class="hero-art" role="img" aria-label="An illustration of a connected world">
+          <div class="art-orbit" aria-hidden="true"></div>
+          <div class="sun" aria-hidden="true"></div>
+          <div class="globe" aria-hidden="true">
+            <span class="globe-dot dot-one"></span>
+            <span class="globe-dot dot-two"></span>
+            <span class="globe-dot dot-three"></span>
+          </div>
+          <div class="art-note">
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <span><strong>Rooted together</strong><span>Connected everywhere</span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="A shared heritage">
+        <div class="shell intro-inner">
+          <p>
+            From one village in Andhra Pradesh to many corners of the world —
+            a shared name keeps the connection close.
+          </p>
+          <div class="stat">
+            <strong>~90%</strong>
+            <span>of the village shares the Pappula surname</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell story" id="story" aria-labelledby="story-title">
+        <div class="section-heading">
+          <p class="eyebrow">Where it begins</p>
+          <h2 id="story-title">A village at the heart of our story.</h2>
+        </div>
+        <div class="story-copy">
+          <p>
+            Pappulavaripalem is where the Pappula story has deep roots. With
+            around 90% of people there sharing the surname, the name is part
+            of the village's everyday identity.
+          </p>
+          <p>
+            Over time, people from the village have settled in places across
+            the world. Their paths are different, but the connection to a
+            shared hometown and family name remains.
+          </p>
+        </div>
+      </section>
+
+      <section class="shell community" id="community" aria-labelledby="community-title">
+        <div class="shell community-inner">
+          <div>
+            <p class="eyebrow">One community, across the world</p>
+            <h2 id="community-title">Many places.<br>One connection.</h2>
+            <p class="community-copy">
+              Wherever life takes us, our name carries a piece of home. This is
+              a place to celebrate those roots and the people who share them.
+            </p>
+          </div>
+          <div class="community-quote">
+            <p>“A familiar name can make the whole world feel a little closer.”</p>
+            <span>For everyone who carries the Pappula name</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>© Pappula · Rooted in Pappulavaripalem, connected everywhere.</p>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.querySelector(".menu-toggle");
+      const navigation = document.querySelector("#site-navigation");
+
+      menuButton.addEventListener("click", () => {
+        const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+
+      navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          menuButton.setAttribute("aria-expanded", "false");
+          navigation.classList.remove("is-open");
+        }
+      });
+    </script>
+  </body>
+</html>
