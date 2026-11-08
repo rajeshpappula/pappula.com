@@ -7,18 +7,18 @@
       name="description"
       content="The story of the Pappula name, rooted in Pappulavaripalem and carried by a community around the world."
     >
-    <meta name="theme-color" content="#f7f5ef">
+    <meta name="theme-color" content="#fbf8ed">
     <title>Pappula — One name, many journeys</title>
     <style>
       :root {
         color-scheme: light;
-        --paper: #f7f5ef;
-        --ink: #1d3029;
-        --muted: #627068;
-        --green: #345b48;
-        --green-dark: #234235;
-        --orange: #d97748;
-        --line: #dedfd5;
+        --paper: #fbf8ed;
+        --ink: #19371e;
+        --muted: #636b5d;
+        --green: #28612d;
+        --green-dark: #123b1d;
+        --gold: #c99a18;
+        --line: #e5dcc0;
         --serif: Georgia, "Times New Roman", serif;
         --sans: "Segoe UI", Arial, sans-serif;
       }
@@ -47,7 +47,7 @@
 
       a:focus-visible,
       button:focus-visible {
-        outline: 3px solid var(--orange);
+        outline: 3px solid var(--gold);
         outline-offset: 4px;
       }
 
@@ -59,7 +59,8 @@
       .site-header {
         position: relative;
         z-index: 2;
-        border-bottom: 1px solid rgb(29 48 41 / 9%);
+        border-bottom: 1px solid var(--line);
+        background: rgb(255 255 255 / 48%);
       }
 
       .header-inner {
@@ -80,17 +81,10 @@
         letter-spacing: -0.04em;
       }
 
-      .brand-mark {
-        width: 34px;
-        height: 34px;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-        background: var(--green);
-        color: white;
-        font-family: var(--sans);
-        font-size: 0.9rem;
-        letter-spacing: 0;
+      .brand-logo {
+        width: 62px;
+        height: 62px;
+        object-fit: contain;
       }
 
       .nav-links {
@@ -151,7 +145,7 @@
       .eyebrow::before {
         width: 24px;
         height: 1px;
-        background: var(--orange);
+        background: var(--gold);
         content: "";
       }
 
@@ -237,147 +231,17 @@
         place-items: center;
       }
 
-      .art-orbit {
-        position: absolute;
-        width: min(100%, 410px);
-        aspect-ratio: 1;
-        border: 1px solid #dfe1d7;
-        border-radius: 50%;
-      }
-
-      .art-orbit::before,
-      .art-orbit::after {
-        position: absolute;
-        inset: 9%;
-        border: 1px solid #e5e5dc;
-        border-radius: 50%;
-        content: "";
-      }
-
-      .art-orbit::after {
-        inset: 19%;
-      }
-
-      .sun {
-        position: absolute;
-        top: 4%;
-        right: 16%;
-        width: 66px;
-        height: 66px;
-        border-radius: 50%;
-        background: #e8ad7b;
-        opacity: 0.75;
-      }
-
-      .globe {
-        position: relative;
-        width: 250px;
-        height: 250px;
-        overflow: hidden;
-        border: 1px solid rgb(255 255 255 / 55%);
-        border-radius: 50%;
-        background:
-          radial-gradient(ellipse at 68% 32%, transparent 35%, rgb(31 66 49 / 35%) 36%, transparent 37%),
-          radial-gradient(ellipse at 50% 50%, transparent 47%, rgb(31 66 49 / 35%) 48%, transparent 49%),
-          radial-gradient(ellipse at 50% 50%, transparent 62%, rgb(31 66 49 / 30%) 63%, transparent 64%),
-          linear-gradient(145deg, #9fb99d, #527b62 58%, #315540);
-        box-shadow: 0 30px 70px rgb(44 71 52 / 19%);
-      }
-
-      .globe::before,
-      .globe::after {
-        position: absolute;
-        inset: 0;
-        border: 1px solid rgb(244 241 224 / 45%);
-        border-radius: 50%;
-        content: "";
-      }
-
-      .globe::before {
-        left: 28%;
-        right: 28%;
-      }
-
-      .globe::after {
-        top: 27%;
-        bottom: 27%;
-      }
-
-      .globe-dot {
-        position: absolute;
-        z-index: 1;
-        width: 12px;
-        height: 12px;
-        border: 3px solid var(--paper);
-        border-radius: 50%;
-        background: var(--orange);
-        box-shadow: 0 0 0 6px rgb(247 245 239 / 18%);
-      }
-
-      .dot-one {
-        top: 34%;
-        left: 33%;
-      }
-
-      .dot-two {
-        top: 48%;
-        right: 25%;
-        width: 9px;
-        height: 9px;
-      }
-
-      .dot-three {
-        bottom: 28%;
-        left: 48%;
-        width: 8px;
-        height: 8px;
-      }
-
-      .art-note {
-        position: absolute;
-        right: 0;
-        bottom: 13%;
-        display: flex;
-        align-items: center;
-        gap: 11px;
-        padding: 14px 18px;
-        border: 1px solid rgb(29 48 41 / 8%);
-        border-radius: 14px;
-        background: rgb(255 255 255 / 85%);
-        box-shadow: 0 12px 35px rgb(33 47 39 / 8%);
-      }
-
-      .note-icon {
-        width: 35px;
-        height: 35px;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-        background: #f4e8d9;
-        color: #a75332;
-        font-size: 1rem;
-      }
-
-      .art-note strong,
-      .art-note span {
+      .hero-logo {
         display: block;
-      }
-
-      .art-note strong {
-        margin-bottom: 3px;
-        font-family: var(--serif);
-        font-size: 1rem;
-        font-weight: 500;
-      }
-
-      .art-note span {
-        color: var(--muted);
-        font-size: 0.74rem;
+        width: min(100%, 430px);
+        height: auto;
+        border-radius: 50%;
+        filter: drop-shadow(0 22px 34px rgb(39 54 26 / 18%));
       }
 
       .intro-band {
         border-block: 1px solid var(--line);
-        background: #efeee7;
+        background: #f1ecd9;
       }
 
       .intro-inner {
@@ -400,7 +264,7 @@
 
       .stat {
         padding-left: 32px;
-        border-left: 1px solid #d5d7cc;
+        border-left: 1px solid #d9cc9f;
       }
 
       .stat strong {
@@ -452,6 +316,7 @@
         border-radius: 22px;
         background: var(--green-dark);
         color: #f8f6ef;
+        box-shadow: inset 0 4px 0 var(--gold);
       }
 
       .community-inner {
@@ -462,7 +327,7 @@
       }
 
       .community .eyebrow {
-        color: #c9d7c6;
+        color: #f1d77d;
       }
 
       .community h2 {
@@ -476,7 +341,7 @@
       .community-copy {
         max-width: 450px;
         margin-bottom: 0;
-        color: #c9d3ca;
+        color: #d8e0d3;
         line-height: 1.8;
       }
 
@@ -494,7 +359,7 @@
       }
 
       .community-quote span {
-        color: #c9d3ca;
+        color: #e8d78e;
         font-size: 0.8rem;
       }
 
@@ -531,20 +396,6 @@
 
         .hero-art {
           min-height: 360px;
-        }
-
-        .art-orbit {
-          width: min(88%, 360px);
-        }
-
-        .globe {
-          width: 220px;
-          height: 220px;
-        }
-
-        .art-note {
-          right: 2%;
-          bottom: 5%;
         }
 
         .story {
@@ -619,18 +470,8 @@
         }
 
         .hero-art {
-          min-height: 315px;
-        }
-
-        .globe {
-          width: 190px;
-          height: 190px;
-        }
-
-        .art-note {
-          right: 0;
-          bottom: 3%;
-          padding: 11px 13px;
+          min-height: 0;
+          padding-top: 16px;
         }
 
         .intro-inner {
@@ -677,7 +518,7 @@
     <header class="site-header">
       <div class="shell header-inner">
         <a class="brand" href="#home" aria-label="Pappula home">
-          <span class="brand-mark" aria-hidden="true">P</span>
+          <img class="brand-logo" src="logo.png" alt="">
           <span>Pappula</span>
         </a>
         <button
@@ -711,18 +552,12 @@
             <a class="button button-secondary" href="#community">Meet the community</a>
           </div>
         </div>
-        <div class="hero-art" role="img" aria-label="An illustration of a connected world">
-          <div class="art-orbit" aria-hidden="true"></div>
-          <div class="sun" aria-hidden="true"></div>
-          <div class="globe" aria-hidden="true">
-            <span class="globe-dot dot-one"></span>
-            <span class="globe-dot dot-two"></span>
-            <span class="globe-dot dot-three"></span>
-          </div>
-          <div class="art-note">
-            <span class="note-icon" aria-hidden="true">✳</span>
-            <span><strong>Rooted together</strong><span>Connected everywhere</span></span>
-          </div>
+        <div class="hero-art">
+          <img
+            class="hero-logo"
+            src="logo.png"
+            alt="Pappula family emblem celebrating its heritage in Pappulavaripalem and community around the world"
+          >
         </div>
       </section>
 
@@ -733,8 +568,8 @@
             a shared name keeps the connection close.
           </p>
           <div class="stat">
-            <strong>~90%</strong>
-            <span>of the village shares the Pappula surname</span>
+            <strong>One name</strong>
+            <span>many journeys, shared roots</span>
           </div>
         </div>
       </section>
@@ -746,9 +581,9 @@
         </div>
         <div class="story-copy">
           <p>
-            Pappulavaripalem is where the Pappula story has deep roots. With
-            around 90% of people there sharing the surname, the name is part
-            of the village's everyday identity.
+            Pappulavaripalem is where the Pappula story has deep roots. The
+            village remains an important part of the shared heritage carried
+            by Pappula families.
           </p>
           <p>
             Over time, people from the village have settled in places across
@@ -779,6 +614,7 @@
     <footer class="site-footer">
       <div class="shell footer-inner">
         <p>© Pappula · Rooted in Pappulavaripalem, connected everywhere.</p>
+        <a href="https://github.com/rajeshpappula/pappula.com" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>
         <a href="#home">Back to top ↑</a>
       </div>
     </footer>
